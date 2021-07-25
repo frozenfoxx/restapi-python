@@ -1,3 +1,4 @@
+Cython
 fastapi
 uvicorn[standard]
 #sqlite3
