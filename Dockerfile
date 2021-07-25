@@ -6,7 +6,7 @@ LABEL maintainer="FrozenFOXX <frozenfoxx@churchoffoxx.net>"
 
 # Variables
 ENV APPDIR="/app" \
-  APP_DEPS="build-base openssl-dev python3-dev" \
+  APP_DEPS="automake build-base openssl-dev python3-dev" \
   HOST="0.0.0.0" \
   PORT="8080"
 
