@@ -8,7 +8,7 @@ with open(os.path.join(pkg_dir, "README.md"), "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="stream_repeater",
+    name="restapi",
     version='0.1.0',
     author="FrozenFOXX",
     author_email="frozenfoxx@churchoffoxx.net",
@@ -27,7 +27,7 @@ setuptools.setup(
         'fastapi'
     ],
     entry_points = {
-        "console_scripts": ["restapi=restapi.app:main"],
+        "console_scripts": ["restapi=restapi.main:app"],
     },
     data_files=[],
 )

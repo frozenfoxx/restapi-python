@@ -2,4 +2,4 @@
 
 pip3 install .
 
-uvicorn app.main:app --host ${HOST} --port ${PORT} $@
+uvicorn restapi.main:app --host ${HOST} --port ${PORT} $@
