@@ -26,6 +26,11 @@ class Guestbook:
         else:
             raise RuntimeError(str(name_to_delete) + " is not in the book")
 
+    def signatures(self):
+        """ List all signatures """
+
+        return self.signatures
+
     def update(self, name_to_update: str, date_updated: datetime.date):
         """ Update when a guest signed the book """
 
