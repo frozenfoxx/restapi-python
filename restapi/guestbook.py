@@ -8,12 +8,12 @@ class Guestbook:
     def __init__(self):
         self.signatures = {}
 
-    def add(self, name_to_add: str, date_added: datetime.date):
+    def add(self, name_to_add: str):
         """ Add a signature to the book if not already signed """
 
         if not name_to_add in self.signatures:
             self.signatures.update(
-                {name_to_add: date_added}
+                {name_to_add: datetime.now()}
             )
         else:
             raise RuntimeError(str(name_to_add) + " already signed on " + str(self.signatures[name_to_add]))
@@ -31,12 +31,12 @@ class Guestbook:
 
         return self.signatures
 
-    def update(self, name_to_update: str, date_updated: datetime.date):
+    def update(self, name_to_update: str):
         """ Update when a guest signed the book """
 
         if name_to_update in self.signatures:
             self.signatures.update(
-                {name_to_update: date_updated}
+                {name_to_update: datetime.now()}
             )
         else:
             raise RuntimeError(str(name_to_update) + " is not in the book")
