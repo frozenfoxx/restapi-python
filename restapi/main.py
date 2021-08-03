@@ -9,7 +9,7 @@ from typing import Optional
 import datetime
 
 app = FastAPI()
-guestbook = Guestbook
+guestbook = Guestbook()
 
 @app.get("/")
 async def read_root():
@@ -19,21 +19,21 @@ async def read_root():
 async def read_signatures():
     return guestbook.signatures
 
-@app.post("/signatures/{signature_id}")
-async def create_signature(signature_id: str):
-    return guestbook.add(signature_id)
+@app.post("/signatures/{id}")
+async def create_signature(id):
+    return guestbook.add(id)
 
-@app.get("/signatures/{signature_id}")
-async def read_signature(signature_id: str):
-    return guestbook.signatures[signature_id]
+@app.get("/signatures/{id}")
+async def read_signature(id: str):
+    return guestbook.signatures[id]
 
-@app.put("/signatures/{signature_id}")
-async def update_signature(signature_id: str):
-    return guestbook.update(signature_id)
+@app.put("/signatures/{id}")
+async def update_signature(id: str):
+    return guestbook.update(id)
 
-@app.delete("/signatures/{signature_id}")
-async def delete_signature(signature_id: str):
-    return guestbook.delete(signature_id)
+@app.delete("/signatures/{id}")
+async def delete_signature(id: str):
+    return guestbook.delete(id)
 
 if __name__ == "__main__":
     app.run()
