@@ -25,3 +25,13 @@ docker run \
   -p 8080:8080 \
   frozenfoxx/restapi-python:latest
 ```
+
+# Usage
+
+## Create
+
+## Read
+
+## Update
+
+## Delete

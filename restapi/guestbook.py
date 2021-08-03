@@ -18,6 +18,8 @@ class Guestbook:
         else:
             raise RuntimeError(str(name_to_add) + " already signed on " + str(self.signatures[name_to_add]))
 
+        return "Successfully added " + name_to_add + " at " + str(self.signatures[name_to_add])
+
     def delete(self, name_to_delete: str):
         """ Delete a signature from the book """
 
@@ -25,6 +27,8 @@ class Guestbook:
             self.signatures.pop(name_to_delete)
         else:
             raise RuntimeError(str(name_to_delete) + " is not in the book")
+        
+        return "Successfully removed " + name_to_delete + " at " + str(self.signatures[name_to_delete])
 
     def signatures(self):
         """ List all signatures """
@@ -40,3 +44,5 @@ class Guestbook:
             )
         else:
             raise RuntimeError(str(name_to_update) + " is not in the book")
+
+        return "Successfully updated " + name_to_update + " at " + str(self.signatures[name_to_update])
