@@ -26,12 +26,26 @@ docker run \
   frozenfoxx/restapi-python:latest
 ```
 
+## Environment Variables
+
+* **HOST**: which IP/FQDN to listen on (default: 0.0.0.0)
+* **PORT**: which port to listen on (default: 8080)
+
 # Usage
 
 ## Create
 
+* `curl --request POST --url http://[host]:[port]/signatures/[ID]`: create a new signature, ID.
+
 ## Read
+
+* `curl --request GET --url http://[host]:[port]/signatures`: retrieve all signatures.
+* `curl --request GET --url http://[host]:[port]/signatures/[ID]`: retrieve ID's signature
 
 ## Update
 
+* `curl --request PUT --url http://[host]:[port]/signatures/[ID]`: update the time ID has signed.
+
 ## Delete
+
+* `curl --request DELETE --url http://[host]:[port]/signatures/[ID]`: delete ID's signature.
