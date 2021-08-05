@@ -28,7 +28,7 @@ class Guestbook:
         else:
             raise RuntimeError(str(name_to_delete) + " is not in the book")
         
-        return "Successfully removed " + name_to_delete + " at " + str(self.signatures[name_to_delete])
+        return "Successfully removed " + name_to_delete
 
     def signatures(self):
         """ List all signatures """
